@@ -1,0 +1,68 @@
+.navigation {
+    z-index: 10;
+
+    &__nav {
+        background-color: $color-primary;
+        padding: 3rem 2rem;
+    }
+
+    &__container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__menu {
+        cursor: pointer;
+    }
+
+    &__icon {
+        position: relative;
+
+        &,
+        &::after,
+        &::before {
+            width: 20px;
+            height: 2px;
+            background-color: #000;
+            display: inline-block;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+        }
+
+        &::before {
+            top: 6px;
+        }
+
+        &::after {
+            top: -6px;
+        }
+    }
+
+    &__sticky {
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        background-color: #fff;
+        box-shadow: 0 0.25rem 2rem 0 rgba(0, 0, 0, 0.05);
+        animation: enter 0.5s;
+    }
+}
+
+@keyframes enter {
+    from {
+        transform: translateY(-100px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}

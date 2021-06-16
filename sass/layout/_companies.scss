@@ -1,0 +1,25 @@
+.companies {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+    text-align: center;
+    border-bottom: 1px solid rgba($color-font-dark-grey, 0.2);
+
+    @media only screen and (max-width: $bp-small) {
+        padding: 7rem 2rem;
+    }
+
+    &__brands {
+        padding-top: 15rem;
+        padding-bottom: 10rem;
+        @media only screen and (max-width: $bp-small) {
+            padding: 8rem 0;
+        }
+    }
+
+    &__logo {
+        margin: 5rem;
+        width: 6.4rem;
+        height: 6.4rem;
+        display: inline-block;
+    }
+}

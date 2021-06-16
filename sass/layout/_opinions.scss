@@ -1,0 +1,136 @@
+.opinions {
+    padding: 20rem 0;
+    background-color: $color-terciary;
+
+    @media only screen and (max-width: $bp-small) {
+        padding: 7rem 2rem;
+    }
+
+    &__container {
+        text-align: center;
+        max-width: 120rem;
+        margin: auto;
+
+        @media only screen and (max-width: $bp-small) {
+            text-align: left;
+        }
+    }
+
+    &__top-text {
+        margin-bottom: 10rem;
+        @media only screen and (max-width: $bp-small) {
+            margin-bottom: 5rem;
+        }
+    }
+
+    &__section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__content {
+        width: 50%;
+        padding: 6rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            width: 70%;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            width: 100%;
+            padding: 5rem 0;
+        }
+
+        &-img {
+            width: 10rem;
+            @media only screen and (max-width: $bp-small) {
+                width: 6.4rem;
+                height: 6.4rem;
+            }
+        }
+
+        &-title {
+            margin: 2rem 0 1rem;
+            font-size: 2.8rem;
+            font-weight: 700;
+            font-family: $font-serif;
+        }
+
+        &-subtitle {
+            font-size: 1.6rem;
+            color: $color-font-dark-grey;
+            line-height: 2.5rem;
+        }
+
+        &-info {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @media only screen and (max-width: $bp-small) {
+                justify-content: flex-start;
+            }
+        }
+
+        &-autor {
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            z-index: 2;
+        }
+
+        &-background {
+            display: block;
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            position: relative;
+            background-color: #fff;
+            margin-left: -1.5rem;
+            margin-right: 2rem;
+        }
+
+        &-brand {
+            display: block;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            position: absolute;
+            top: 8px;
+            left: 12px;
+            z-index: 20;
+        }
+
+        &-card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        &-degree {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: $color-font-dark-grey;
+        }
+    }
+
+    &__content--1 {
+        align-self: flex-start;
+    }
+
+    &__content--2 {
+        align-self: flex-end;
+        @media only screen and (max-width: $bp-small) {
+            align-self: flex-start;
+        }
+    }
+
+    &__content--3 {
+        align-self: flex-start;
+    }
+}

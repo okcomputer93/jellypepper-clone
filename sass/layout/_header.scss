@@ -1,0 +1,64 @@
+.header {
+    padding: 10rem;
+    background-color: $color-primary;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        // transition: 0.5s transform ease-in, opacity 2.5s;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        align-items: flex-start;
+        padding: 22rem 2rem;
+    }
+
+    &__img {
+        width: 15rem;
+        height: 15rem;
+
+        @media only screen and (max-width: $bp-small) {
+            width: 6.4rem;
+            height: 6.4rem;
+        }
+    }
+
+    &__title {
+        margin-top: 6rem;
+        font-family: $font-serif;
+        font-size: 6rem;
+        text-align: center;
+        max-width: 70rem;
+        font-weight: 700;
+        line-height: 8rem;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 2.8rem;
+            line-height: 4rem;
+            text-align: left;
+        }
+    }
+
+    &__subtitle {
+        margin: 3rem 0;
+        max-width: 70rem;
+        font-size: 3rem;
+        text-align: center;
+        line-height: 4rem;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 2rem;
+            text-align: left;
+            line-height: 3rem;
+            font-weight: 400;
+        }
+    }
+
+    &--hidden {
+        opacity: 0;
+        transform: translateY(-20%);
+    }
+}

@@ -1,0 +1,137 @@
+.navigation-slide {
+    // For open:
+    // &__background
+    // visibility: visible;
+    // display: block;
+    // &__wrapper
+    // transform: translateX(0);
+
+    &__background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(#fff, 0.8);
+        width: 100vw;
+        height: 100vh;
+        z-index: 98;
+        transition: all 0.2s ease-out;
+
+        visibility: hidden;
+
+        &--visible {
+            visibility: visible !important;
+        }
+    }
+
+    &__wrapper {
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: #fff;
+        width: 64rem;
+        height: 100%;
+        z-index: 100;
+        overflow: auto;
+        // transition: all 0.4s ease-in-out;
+
+        padding: 4rem 6rem;
+        display: flex;
+        flex-direction: column;
+
+        transform: translateX(100%);
+
+        @media only screen and (max-width: $bp-small) {
+            width: 100vw;
+        }
+
+        &--visible {
+            transform: translateX(0) !important;
+        }
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__exit-container {
+        padding: 1rem;
+        cursor: pointer;
+    }
+
+    &__exit {
+        transform: rotate(-45deg);
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotate(-90deg);
+        }
+    }
+
+    &__exit,
+    &__exit::before {
+        width: 20px;
+        height: 2px;
+        background-color: #000;
+        border-radius: 10px;
+    }
+
+    &__main-links {
+        padding-top: 10rem;
+        display: flex;
+        flex-wrap: wrap;
+
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+        }
+    }
+
+    &__link {
+        flex: 1 0 50%;
+        display: inline-block;
+        text-decoration: none;
+        color: $color-font-dark-grey;
+        font-size: 3.8rem;
+        margin-bottom: 2.4rem;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 3.19rem;
+        }
+
+        &:hover {
+            color: #000;
+        }
+    }
+
+    &__sec-links {
+        padding-top: 5rem;
+        display: flex;
+        flex-wrap: wrap;
+
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+        }
+    }
+
+    &__sec-link {
+        flex: 1 0 33.33333%;
+        display: inline-block;
+        text-decoration: none;
+        color: $color-font-dark-grey;
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 2.22rem;
+        }
+
+        &:hover {
+            color: #000;
+        }
+    }
+}

@@ -1,0 +1,59 @@
+.stories {
+    padding: 12rem 0;
+
+    @media only screen and (max-width: $bp-small) {
+        padding: 7rem 2rem;
+    }
+
+    &__container {
+        max-width: 122rem;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 10rem 0;
+
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+            align-items: center;
+            padding: 5rem 0;
+        }
+    }
+
+    &__item {
+        flex: 1;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        @media only screen and (max-width: $bp-small) {
+            width: 60%;
+            padding-top: 4rem;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 25rem;
+        border-radius: 3px;
+
+        @media only screen and (max-width: $bp-large) {
+            height: 20rem;
+        }
+    }
+
+    &__title {
+        margin-top: 3rem;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 3.2rem;
+    }
+
+    &__subtitle {
+        margin-top: 2rem;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 2.5rem;
+        color: $color-font-dark-grey;
+    }
+}
